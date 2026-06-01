@@ -1,0 +1,32 @@
+name: Daily Bug Data Refresh
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Every day at 6 AM UTC
+  workflow_dispatch:       # Also allows manual trigger
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Fetch bug data from GitLab
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+          GITLAB_URL: https://git.enlight.dev
+        run: python fetch_bugs.py
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add bug_data.json last_updated.txt
+          git diff --staged --quiet || git commit -m "Auto-refresh bug data $(date +'%Y-%m-%d %H:%M UTC')"
+          git push
