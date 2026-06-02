@@ -2383,6 +2383,7 @@ Right now, VM backup, restore, and delete options are available with the Protect
     </div>
   </div>
 
+  <div id="bdb-debug" style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:8px 12px;margin-bottom:10px;font-size:11px;color:#856404">Loading...</div>
   <div class="bdb-metrics">
     <div class="bdb-metric"><div class="bdb-num" style="color:#1F3864" data-bdm="all" id="m-total">0</div><div class="bdb-lbl">Total Raised</div><div class="bdb-sub" style="color:#1F3864" id="m-total-sub">—</div></div>
     <div class="bdb-metric"><div class="bdb-num" style="color:#1B5E20" data-bdm="closed" id="m-closed">0</div><div class="bdb-lbl">Closed</div><div class="bdb-sub" style="color:#1B5E20" id="m-closed-pct">—</div></div>
@@ -2483,8 +2484,10 @@ var DOMAINS = ['IaaS Platform','PaaS & Kubernetes','Cloud Marketplace','Develope
 function eH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
 function renderDashboard(){
+  var dbg = document.getElementById('bdb-debug');
+  if(dbg) dbg.textContent = 'BD length: '+BD.length+' | open: '+BD.filter(function(b){return b.state==="open";}).length+' | closed: '+BD.filter(function(b){return b.state==="closed";}).length;
   var total = BD.length;
-  if(!total) return;
+  if(!total) { if(dbg) dbg.textContent='BD is empty!'; return; }
   var openBugs   = BD.filter(function(b){return b.state==='open';});
   var closedBugs = BD.filter(function(b){return b.state==='closed';});
   var devBugs    = openBugs.filter(function(b){return b.stage==='In Dev';});
