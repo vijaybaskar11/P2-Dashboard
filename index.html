@@ -2698,7 +2698,7 @@ document.getElementById('bdb-save-img').addEventListener('click',function(){
 // Print
 document.getElementById('bdb-print').addEventListener('click',function(){window.print();});
 
-renderDashboard();
+if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",renderDashboard);}else{renderDashboard();}
 })();
 </script>
 
