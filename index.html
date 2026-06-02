@@ -2279,59 +2279,47 @@ Right now, VM backup, restore, and delete options are available with the Protect
 </div><!-- end padding wrapper -->
 </div><!-- end p0dash-content -->
 
-  </div><!-- close p7 -->
-
   <div id="p8" class="panel">
 <style>
-.bdb-wrap{padding:2px 0}
-.bdb-hdr{background:#7B0000;padding:10px 16px;border-radius:8px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
-.bdb-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
-.bdb-metric{background:#fff;border-radius:8px;padding:14px 10px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.bdb-num{font-size:28px;font-weight:700;cursor:pointer;border-bottom:2px dotted currentColor;display:inline-block;line-height:1.3}
-.bdb-lbl{font-size:10px;color:#888;margin-top:5px}
-.bdb-sub{font-size:11px;margin-top:3px;font-weight:600}
-.bdb-card{background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.08);margin-bottom:14px;overflow:hidden}
-.bdb-card-hdr{background:#1F3864;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
-.bdb-card-hdr h3{color:#fff;font-size:13px;font-weight:700;margin:0}
-.bdb-card-hdr small{color:rgba(255,255,255,.6);font-size:11px}
-.bdb-card-body{padding:14px 16px}
-.bdb-two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
-.bdb-br{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.bdb-bl{width:170px;font-size:12px;color:#444;flex-shrink:0}
-.bdb-bt{flex:1;height:20px;background:#f0f2f5;border-radius:4px;overflow:hidden;cursor:pointer}
-.bdb-bt:hover{opacity:.85}
-.bdb-bf{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:11px;font-weight:700;color:#fff;white-space:nowrap;pointer-events:none}
-.bdb-bc{font-size:12px;font-weight:700;color:#333;min-width:28px;text-align:right;flex-shrink:0;cursor:pointer;border-bottom:1px dotted #999}
-.bdb-tbl{width:100%;border-collapse:collapse;font-size:12px}
-.bdb-tbl th{background:#f0f2f5;color:#555;font-size:11px;font-weight:700;padding:8px 10px;text-align:left;border-bottom:1px solid #e0e0e0;white-space:nowrap}
-.bdb-tbl td{padding:8px 10px;border-bottom:0.5px solid #f0f0f0;vertical-align:middle}
-.bdb-tbl tr:hover td{background:#f5f8ff}
-.bdb-bdg{display:inline-block;padding:2px 9px;border-radius:10px;font-size:10px;font-weight:700;cursor:pointer}
-.bdb-bdg:hover{opacity:.8}
-.bdb-o{background:#FDECEA;color:#C00000}
-.bdb-c{background:#E8F5E9;color:#1B5E20}
-.bdb-d{background:#FEF3E2;color:#8B4000}
-.bdb-q{background:#E8F5E9;color:#1B5E20}
-.bdb-prog{height:7px;border-radius:4px;background:#eee;overflow:hidden;margin-top:4px}
-.bdb-pf{height:100%;border-radius:4px}
-.bdb-sg{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;max-width:400px}
-.bdb-sb{background:#f8f9fb;border-radius:7px;padding:12px 6px;text-align:center;cursor:pointer;border:1px solid transparent}
-.bdb-sb:hover{background:#eef3ff;border-color:#c5d8f0}
-.bdb-sv{font-size:22px;font-weight:700;border-bottom:2px dotted currentColor;display:inline-block;line-height:1.3}
-.bdb-sl{font-size:10px;color:#888;margin-top:5px}
-.bdb-pb{display:flex;height:26px;border-radius:6px;overflow:hidden;margin-bottom:10px}
-.bdb-ps{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;cursor:pointer}
-.bdb-ps:hover{opacity:.85}
-.bdb-leg{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
-.bdb-li{display:flex;align-items:center;gap:5px;font-size:11px;color:#555}
-.bdb-ld{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.bw{padding:2px 0}.bh{background:#7B0000;padding:10px 16px;border-radius:8px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.bm{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.bme{background:#fff;border-radius:8px;padding:14px 10px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.bn{font-size:28px;font-weight:700;cursor:pointer;border-bottom:2px dotted currentColor;display:inline-block;line-height:1.3}
+.bl{font-size:10px;color:#888;margin-top:5px}.bs{font-size:11px;margin-top:3px;font-weight:600}
+.bc{background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.08);margin-bottom:14px;overflow:hidden}
+.bch{background:#1F3864;padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
+.bch h3{color:#fff;font-size:13px;font-weight:700;margin:0}.bch small{color:rgba(255,255,255,.6);font-size:11px}
+.bcb{padding:14px 16px}.bt2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.bbr{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bbl{width:170px;font-size:12px;color:#444;flex-shrink:0}
+.bbt{flex:1;height:20px;background:#f0f2f5;border-radius:4px;overflow:hidden;cursor:pointer}
+.bbt:hover{opacity:.85}.bbf{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:11px;font-weight:700;color:#fff;white-space:nowrap;pointer-events:none}
+.bbc{font-size:12px;font-weight:700;color:#333;min-width:28px;text-align:right;flex-shrink:0;cursor:pointer;border-bottom:1px dotted #999}
+.btbl{width:100%;border-collapse:collapse;font-size:12px}
+.btbl th{background:#f0f2f5;color:#555;font-size:11px;font-weight:700;padding:8px 10px;text-align:left;border-bottom:1px solid #e0e0e0;white-space:nowrap}
+.btbl td{padding:8px 10px;border-bottom:0.5px solid #f0f0f0;vertical-align:middle}
+.btbl tr:hover td{background:#f5f8ff}
+.bdg{display:inline-block;padding:2px 9px;border-radius:10px;font-size:10px;font-weight:700;cursor:pointer}
+.bdg:hover{opacity:.8}.bo{background:#FDECEA;color:#C00000}.bcc{background:#E8F5E9;color:#1B5E20}
+.bdd{background:#FEF3E2;color:#8B4000}.bqq{background:#E8F5E9;color:#1B5E20}
+.bpg{height:7px;border-radius:4px;background:#eee;overflow:hidden;margin-top:4px}
+.bpf{height:100%;border-radius:4px}.bsg{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;max-width:400px}
+.bsb{background:#f8f9fb;border-radius:7px;padding:12px 6px;text-align:center;cursor:pointer;border:1px solid transparent}
+.bsb:hover{background:#eef3ff;border-color:#c5d8f0}
+.bsv{font-size:22px;font-weight:700;border-bottom:2px dotted currentColor;display:inline-block;line-height:1.3}
+.bsl{font-size:10px;color:#888;margin-top:5px}
+.bpb{display:flex;height:26px;border-radius:6px;overflow:hidden;margin-bottom:10px}
+.bps{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;cursor:pointer}
+.bps:hover{opacity:.85}.ble{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+.bli{display:flex;align-items:center;gap:5px;font-size:11px;color:#555}
+.bld{width:10px;height:10px;border-radius:2px;flex-shrink:0}
 [data-bdm]{cursor:pointer}
 </style>
-<div class="bdb-wrap">
-  <div class="bdb-hdr">
+<div class="bw">
+  <div class="bh">
     <div>
-      <div style="color:#fff;font-size:14px;font-weight:700">🐛 Bug Dashboard &mdash; v9.8 &middot; 1 June 2026</div>
-      <div style="color:rgba(255,255,255,.65);font-size:11px;margin-top:2px">git.enlight.dev &middot; enlight360containers &middot; Milestone: v9.8 - 1 June 2026</div>
+      <div style="color:#fff;font-size:14px;font-weight:700">Bug Dashboard - v9.8 - 1 June 2026</div>
+      <div style="color:rgba(255,255,255,.65);font-size:11px;margin-top:2px">git.enlight.dev - enlight360containers - Milestone: v9.8 - 1 June 2026</div>
     </div>
     <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
       <div style="color:rgba(255,255,255,.8);font-size:11px;background:rgba(255,255,255,.15);padding:4px 14px;border-radius:20px">Click any number to drill down</div>
@@ -2339,39 +2327,34 @@ Right now, VM backup, restore, and delete options are available with the Protect
       <button id="bdb-print" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.4);padding:5px 12px;border-radius:5px;font-size:12px;font-weight:600;cursor:pointer">Print</button>
     </div>
   </div>
-  <div class="bdb-metrics">
-    <div class="bdb-metric"><div class="bdb-num" style="color:#1F3864" data-bdm="all" id="m-total">-</div><div class="bdb-lbl">Total Raised</div><div class="bdb-sub" style="color:#1F3864">v9.8 - 1 June 2026</div></div>
-    <div class="bdb-metric"><div class="bdb-num" style="color:#1B5E20" data-bdm="closed" id="m-closed">-</div><div class="bdb-lbl">Closed</div><div class="bdb-sub" style="color:#1B5E20" id="m-closed-pct">-</div></div>
-    <div class="bdb-metric"><div class="bdb-num" style="color:#C00000" data-bdm="open" id="m-open">-</div><div class="bdb-lbl">Still Open</div><div class="bdb-sub" style="color:#C00000" id="m-open-pct">-</div></div>
-    <div class="bdb-metric"><div class="bdb-num" style="color:#2E75B6" data-bdm="stage:In Dev" id="m-dev">-</div><div class="bdb-lbl">In Dev</div><div class="bdb-sub" style="color:#2E75B6">being fixed</div></div>
+  <div class="bm">
+    <div class="bme"><div class="bn" style="color:#1F3864" data-bdm="all" id="m-total">-</div><div class="bl">Total Raised</div><div class="bs" style="color:#1F3864">v9.8 - 1 June 2026</div></div>
+    <div class="bme"><div class="bn" style="color:#1B5E20" data-bdm="closed" id="m-closed">-</div><div class="bl">Closed</div><div class="bs" style="color:#1B5E20" id="m-closed-pct">-</div></div>
+    <div class="bme"><div class="bn" style="color:#C00000" data-bdm="open" id="m-open">-</div><div class="bl">Still Open</div><div class="bs" style="color:#C00000" id="m-open-pct">-</div></div>
+    <div class="bme"><div class="bn" style="color:#2E75B6" data-bdm="stage:In Dev" id="m-dev">-</div><div class="bl">In Dev</div><div class="bs" style="color:#2E75B6">being fixed</div></div>
   </div>
-  <div class="bdb-card">
-    <div class="bdb-card-hdr"><h3>Overall Bug Resolution Progress</h3><small id="prog-sub"></small></div>
-    <div class="bdb-card-body"><div class="bdb-pb" id="prog-bar"></div><div class="bdb-leg" id="prog-leg"></div></div>
-  </div>
-  <div class="bdb-card">
-    <div class="bdb-card-hdr"><h3>Bug Breakdown by Domain</h3><small>Click any count to see issues</small></div>
-    <div style="overflow-x:auto"><table class="bdb-tbl">
+  <div class="bc"><div class="bch"><h3>Overall Bug Resolution Progress</h3><small id="prog-sub"></small></div>
+    <div class="bcb"><div class="bpb" id="prog-bar"></div><div class="ble" id="prog-leg"></div></div></div>
+  <div class="bc"><div class="bch"><h3>Bug Breakdown by Domain</h3><small>Click any count to see issues</small></div>
+    <div style="overflow-x:auto"><table class="btbl">
       <thead><tr><th>Domain</th><th style="text-align:center">Raised</th><th style="text-align:center">Closed</th><th style="text-align:center">Open</th><th style="text-align:center">In Dev</th><th style="text-align:center">In QA</th><th style="min-width:130px">Resolution</th></tr></thead>
-      <tbody id="domain-tbody"></tbody>
-    </table></div>
+      <tbody id="domain-tbody"></tbody></table></div></div>
+  <div class="bt2">
+    <div class="bc"><div class="bch"><h3>Open Bugs by Severity</h3><small>click bar to see issues</small></div><div class="bcb" id="sev-body"></div></div>
+    <div class="bc"><div class="bch"><h3>Open Bugs by Type</h3><small>click bar to see issues</small></div><div class="bcb" id="type-body"></div></div>
   </div>
-  <div class="bdb-two">
-    <div class="bdb-card"><div class="bdb-card-hdr"><h3>Open Bugs by Severity</h3><small>click bar to see issues</small></div><div class="bdb-card-body" id="sev-body"></div></div>
-    <div class="bdb-card"><div class="bdb-card-hdr"><h3>Open Bugs by Type</h3><small>click bar to see issues</small></div><div class="bdb-card-body" id="type-body"></div></div>
-  </div>
-  <div class="bdb-card">
-    <div class="bdb-card-hdr"><h3>Open Bugs by Stage</h3><small>click box to drill down</small></div>
-    <div class="bdb-card-body"><div class="bdb-sg" id="stage-grid"></div></div>
-  </div>
+  <div class="bc"><div class="bch"><h3>Open Bugs by Stage</h3><small>click box to drill down</small></div>
+    <div class="bcb"><div class="bsg" id="stage-grid"></div></div></div>
 </div>
-  </div>
+  </div><!-- close p7 -->
+
+  <div id="p8-dummy" style="display:none"></div>
 
 <div id="bdm-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:9000"></div>
 <div id="bdm-box" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:94%;max-width:1080px;max-height:85vh;background:#fff;border-radius:12px;z-index:9001;box-shadow:0 12px 48px rgba(0,0,0,.3);flex-direction:column;overflow:hidden">
   <div style="background:#1F3864;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0">
     <div><div id="bdm-title" style="color:#fff;font-size:14px;font-weight:700"></div><div id="bdm-sub" style="color:rgba(255,255,255,.6);font-size:11px;margin-top:2px"></div></div>
-    <button id="bdm-close" style="background:rgba(255,255,255,.15);border:none;color:#fff;font-size:20px;cursor:pointer;border-radius:6px;width:32px;height:32px;font-family:Arial">&#x2715;</button>
+    <button id="bdm-close" style="background:rgba(255,255,255,.15);border:none;color:#fff;font-size:20px;cursor:pointer;border-radius:6px;width:32px;height:32px;font-family:Arial">X</button>
   </div>
   <div style="padding:9px 14px;background:#f8f9fb;border-bottom:1px solid #eee;display:flex;gap:8px;flex-wrap:wrap;align-items:center;flex-shrink:0">
     <input id="bdm-search" placeholder="Search..." style="font-size:12px;padding:4px 8px;border:1px solid #ddd;border-radius:5px;width:200px">
@@ -2398,13 +2381,13 @@ Right now, VM backup, restore, and delete options are available with the Protect
 
 <script>
 (function(){
-var BD=[{"iid": 330, "title": "Subscription incorrectly marked as expired before actual expiry date", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/330", "created": "29 May 2026"}, {"iid": 6421, "title": "Network Bandwidth Cost Appears as \u00e2\u0082\u00b90.00 in Cost Analysis Despite Configured Pricing in Rate Card", "project": "enlight360-tracker", "domain": "Developer Platform", "state": "open", "stage": "In QA", "severity": "\u2014", "bugtype": "\u2014", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/enlight360-tracker/-/issues/6421", "created": "25 May 2026"}, {"iid": 6419, "title": "Usage Analysis Displays Data for All VMs Instead of Selected VM After Applying Metric Search Filter", "project": "enlight360-tracker", "domain": "Developer Platform", "state": "open", "stage": "In QA", "severity": "\u2014", "bugtype": "\u2014", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/enlight360-tracker/-/issues/6419", "created": "25 May 2026"}, {"iid": 633, "title": "Solution - keep retry option enable in case of deployment gets failed", "project": "ahcp-solutions-layer/ahcp-solutions-layer", "domain": "PaaS & Kubernetes", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Rakesh Yeole", "url": "https://git.enlight.dev/enlight360containers/ahcp-solutions-layer/ahcp-solutions-layer/-/issues/633", "created": "22 May 2026"}, {"iid": 628, "title": "VM creation getting failed in solution deployment", "project": "ahcp-solutions-layer/ahcp-solutions-layer", "domain": "PaaS & Kubernetes", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Amit Rajendra Khairnar", "url": "https://git.enlight.dev/enlight360containers/ahcp-solutions-layer/ahcp-solutions-layer/-/issues/628", "created": "22 May 2026"}, {"iid": 329, "title": "Port list - total number of records not shown for port list", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Normal", "bugtype": "Functional", "assignee": "Tanvi Rathod", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/329", "created": "22 May 2026"}, {"iid": 328, "title": "Register now link click shown page not found error", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Vishal", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/328", "created": "22 May 2026"}, {"iid": 33, "title": "UI Findings & Review (Milestone 1 June 2026)", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "open", "stage": "In Dev", "severity": "\u2014", "bugtype": "\u2014", "assignee": "Vishal", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/33", "created": "21 May 2026"}, {"iid": 323, "title": "Calculator - total amount shown using cloud calculator is not matching with calculation done on calculator application", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/323", "created": "19 May 2026"}, {"iid": 322, "title": "Calculator - Max input size limit should be defined", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/322", "created": "19 May 2026"}, {"iid": 320, "title": "Billing admin pages - Page title should be propre", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Normal", "bugtype": "Functional", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/320", "created": "18 May 2026"}, {"iid": 319, "title": "Billing - some form content not visible on dark theme", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "UI", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/319", "created": "18 May 2026"}, {"iid": 318, "title": "Some times it is observed that css not get upload, after browser refresh page get updated then and page get load successfully", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/318", "created": "18 May 2026"}, {"iid": 316, "title": "Subscription plan - Reports should be proper", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Major", "bugtype": "Functional", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/316", "created": "16 May 2026"}, {"iid": 314, "title": "Subscription plan - UI fields alignment should be proper", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Minor", "bugtype": "UI", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/314", "created": "16 May 2026"}, {"iid": 312, "title": "Dashboard - IaaC module link click redirect to documents page", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Major", "bugtype": "Functional", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/312", "created": "16 May 2026"}, {"iid": 310, "title": "Subscription - alignment should be proper", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Minor", "bugtype": "UI", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/310", "created": "16 May 2026"}, {"iid": 306, "title": "Subscription - Admin settings pages should be exclude from subscription", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/306", "created": "16 May 2026"}, {"iid": 27, "title": "Enlight should be properly shown", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "open", "stage": "In Dev", "severity": "Minor", "bugtype": "UI", "assignee": "Rahul Kuvlekar", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/27", "created": "15 May 2026"}, {"iid": 26, "title": "Label should be properly shown on login form", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "open", "stage": "In Dev", "severity": "Minor", "bugtype": "UI", "assignee": "Rahul Kuvlekar", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/26", "created": "15 May 2026"}, {"iid": 303, "title": "Plan selection option not accessible from choose plan page, when we redirected from upgarde plan link", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In QA", "severity": "Major", "bugtype": "\u2014", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/303", "created": "15 May 2026"}, {"iid": 302, "title": "Plan selection option not accessible from choose plan page, when we redirected from upgarde plan link", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In QA", "severity": "Major", "bugtype": "\u2014", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/302", "created": "15 May 2026"}, {"iid": 31, "title": "Incorrect Monitoring graph data shown", "project": "cloud-app", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Amit Rajendra Khairnar", "url": "https://git.enlight.dev/enlight360containers/cloud-app/-/issues/31", "created": "14 May 2026"}, {"iid": 14, "title": "Page title should be proper for marketplace pages", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "open", "stage": "In Dev", "severity": "Minor", "bugtype": "UI", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/14", "created": "11 May 2026"}, {"iid": 103, "title": "Hostname details not shown for proxmox vm", "project": "enlight-v2-app", "domain": "Other", "state": "open", "stage": "In Dev", "severity": "Major", "bugtype": "Functional", "assignee": "Amit Rajendra Khairnar", "url": "https://git.enlight.dev/enlight360containers/enlight-v2-app/-/work_items/103", "created": "09 May 2026"}, {"iid": 24, "title": "API Gateway - Server header exposing APISIX", "project": "api-gateway-app", "domain": "Developer Platform", "state": "open", "stage": "In QA", "severity": "Critical", "bugtype": "\u2014", "assignee": "Vishal", "url": "https://git.enlight.dev/enlight360containers/api-gateway-app/-/issues/24", "created": "30 Mar 2026"}, {"iid": 27, "title": "Robot account - created at and duration details not shown", "project": "container-registry-ui", "domain": "PaaS & Kubernetes", "state": "closed", "stage": "In Dev", "severity": "Major", "bugtype": "Functional", "assignee": "Tanvi Rathod", "url": "https://git.enlight.dev/enlight360containers/container-registry-ui/-/issues/27", "created": "27 May 2026"}, {"iid": 6414, "title": "UI Findings & Review (Milestone 1 June 2026)", "project": "enlight360-tracker", "domain": "Developer Platform", "state": "closed", "stage": "In Dev", "severity": "\u2014", "bugtype": "\u2014", "assignee": "Tanvi Rathod", "url": "https://git.enlight.dev/enlight360containers/enlight360-tracker/-/issues/6414", "created": "20 May 2026"}, {"iid": 1, "title": "Cluster and Workers jobs projetwise not displayed", "project": "kubernates-service", "domain": "Other", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Sagar Sainkar", "url": "https://git.enlight.dev/enlight360containers/kubernates-service/-/issues/1", "created": "18 May 2026"}, {"iid": 7, "title": "Cluster and Workers logs projetwise not displayed", "project": "kaas-ui", "domain": "PaaS & Kubernetes", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Shubham Jain", "url": "https://git.enlight.dev/enlight360containers/kaas-ui/-/issues/7", "created": "18 May 2026"}, {"iid": 25, "title": "Username field asked for multiple times on login form", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Sagar Sainkar", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/25", "created": "15 May 2026"}, {"iid": 30, "title": "VM upscale - VM is halted still scale logs are generated", "project": "cloud-app", "domain": "IaaS Platform", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Sagar Sainkar", "url": "https://git.enlight.dev/enlight360containers/cloud-app/-/issues/30", "created": "13 May 2026"}, {"iid": 29, "title": "Deleted VM IP not shown in free IP list", "project": "cloud-app", "domain": "IaaS Platform", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Sagar Sainkar", "url": "https://git.enlight.dev/enlight360containers/cloud-app/-/issues/29", "created": "13 May 2026"}, {"iid": 23, "title": "Categories are not show as per given sort order", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Sagar Sainkar", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/23", "created": "12 May 2026"}, {"iid": 10, "title": "Product Catalogue - Error shown on view preview action click", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/10", "created": "10 May 2026"}];
+var BD=[{"iid": 330, "title": "Subscription incorrectly marked as expired before actual expiry date", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/330", "created": "29 May 2026"}, {"iid": 6421, "title": "Network Bandwidth Cost Appears as \u00e2\u0082\u00b90.00 in Cost Analysis Despite Configured Pricing in Rate Card", "project": "enlight360-tracker", "domain": "Developer Platform", "state": "open", "stage": "In QA", "severity": "-", "bugtype": "-", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/enlight360-tracker/-/issues/6421", "created": "25 May 2026"}, {"iid": 6419, "title": "Usage Analysis Displays Data for All VMs Instead of Selected VM After Applying Metric Search Filter", "project": "enlight360-tracker", "domain": "Developer Platform", "state": "open", "stage": "In QA", "severity": "-", "bugtype": "-", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/enlight360-tracker/-/issues/6419", "created": "25 May 2026"}, {"iid": 633, "title": "Solution - keep retry option enable in case of deployment gets failed", "project": "ahcp-solutions-layer/ahcp-solutions-layer", "domain": "PaaS & Kubernetes", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Rakesh Yeole", "url": "https://git.enlight.dev/enlight360containers/ahcp-solutions-layer/ahcp-solutions-layer/-/issues/633", "created": "22 May 2026"}, {"iid": 628, "title": "VM creation getting failed in solution deployment", "project": "ahcp-solutions-layer/ahcp-solutions-layer", "domain": "PaaS & Kubernetes", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Amit Rajendra Khairnar", "url": "https://git.enlight.dev/enlight360containers/ahcp-solutions-layer/ahcp-solutions-layer/-/issues/628", "created": "22 May 2026"}, {"iid": 328, "title": "Register now link click shown page not found error", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Vishal", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/328", "created": "22 May 2026"}, {"iid": 33, "title": "UI Findings & Review (Milestone 1 June 2026)", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "open", "stage": "In Dev", "severity": "-", "bugtype": "-", "assignee": "Vishal", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/33", "created": "21 May 2026"}, {"iid": 323, "title": "Calculator - total amount shown using cloud calculator is not matching with calculation done on calculator application", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/323", "created": "19 May 2026"}, {"iid": 322, "title": "Calculator - Max input size limit should be defined", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/322", "created": "19 May 2026"}, {"iid": 320, "title": "Billing admin pages - Page title should be propre", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Normal", "bugtype": "Functional", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/320", "created": "18 May 2026"}, {"iid": 319, "title": "Billing - some form content not visible on dark theme", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "UI", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/319", "created": "18 May 2026"}, {"iid": 318, "title": "Some times it is observed that css not get upload, after browser refresh page get updated then and page get load successfully", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/318", "created": "18 May 2026"}, {"iid": 316, "title": "Subscription plan - Reports should be proper", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Major", "bugtype": "Functional", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/316", "created": "16 May 2026"}, {"iid": 314, "title": "Subscription plan - UI fields alignment should be proper", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Minor", "bugtype": "UI", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/314", "created": "16 May 2026"}, {"iid": 312, "title": "Dashboard - IaaC module link click redirect to documents page", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Major", "bugtype": "Functional", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/312", "created": "16 May 2026"}, {"iid": 310, "title": "Subscription - alignment should be proper", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Minor", "bugtype": "UI", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/310", "created": "16 May 2026"}, {"iid": 306, "title": "Subscription - Admin settings pages should be exclude from subscription", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Shadab Khan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/306", "created": "16 May 2026"}, {"iid": 27, "title": "Enlight should be properly shown", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "open", "stage": "In Dev", "severity": "Minor", "bugtype": "UI", "assignee": "Rahul Kuvlekar", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/27", "created": "15 May 2026"}, {"iid": 26, "title": "Label should be properly shown on login form", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "open", "stage": "In Dev", "severity": "Minor", "bugtype": "UI", "assignee": "Rahul Kuvlekar", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/26", "created": "15 May 2026"}, {"iid": 303, "title": "Plan selection option not accessible from choose plan page, when we redirected from upgarde plan link", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In QA", "severity": "Major", "bugtype": "-", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/303", "created": "15 May 2026"}, {"iid": 302, "title": "Plan selection option not accessible from choose plan page, when we redirected from upgarde plan link", "project": "cloud-ui", "domain": "IaaS Platform", "state": "open", "stage": "In QA", "severity": "Major", "bugtype": "-", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/cloud-ui/-/issues/302", "created": "15 May 2026"}, {"iid": 31, "title": "Incorrect Monitoring graph data shown", "project": "cloud-app", "domain": "IaaS Platform", "state": "open", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Amit Rajendra Khairnar", "url": "https://git.enlight.dev/enlight360containers/cloud-app/-/issues/31", "created": "14 May 2026"}, {"iid": 14, "title": "Page title should be proper for marketplace pages", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "open", "stage": "In Dev", "severity": "Minor", "bugtype": "UI", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/14", "created": "11 May 2026"}, {"iid": 103, "title": "Hostname details not shown for proxmox vm", "project": "enlight-v2-app", "domain": "Other", "state": "open", "stage": "In Dev", "severity": "Major", "bugtype": "Functional", "assignee": "Amit Rajendra Khairnar", "url": "https://git.enlight.dev/enlight360containers/enlight-v2-app/-/work_items/103", "created": "09 May 2026"}, {"iid": 24, "title": "API Gateway - Server header exposing APISIX", "project": "api-gateway-app", "domain": "Developer Platform", "state": "open", "stage": "In QA", "severity": "Critical", "bugtype": "-", "assignee": "Vishal", "url": "https://git.enlight.dev/enlight360containers/api-gateway-app/-/issues/24", "created": "30 Mar 2026"}, {"iid": 27, "title": "Robot account - created at and duration details not shown", "project": "container-registry-ui", "domain": "PaaS & Kubernetes", "state": "closed", "stage": "In Dev", "severity": "Major", "bugtype": "Functional", "assignee": "Tanvi Rathod", "url": "https://git.enlight.dev/enlight360containers/container-registry-ui/-/issues/27", "created": "27 May 2026"}, {"iid": 6414, "title": "UI Findings & Review (Milestone 1 June 2026)", "project": "enlight360-tracker", "domain": "Developer Platform", "state": "closed", "stage": "In Dev", "severity": "-", "bugtype": "-", "assignee": "Tanvi Rathod", "url": "https://git.enlight.dev/enlight360containers/enlight360-tracker/-/issues/6414", "created": "20 May 2026"}, {"iid": 1, "title": "Cluster and Workers jobs projetwise not displayed", "project": "kubernates-service", "domain": "Other", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Sagar Sainkar", "url": "https://git.enlight.dev/enlight360containers/kubernates-service/-/issues/1", "created": "18 May 2026"}, {"iid": 7, "title": "Cluster and Workers logs projetwise not displayed", "project": "kaas-ui", "domain": "PaaS & Kubernetes", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Shubham Jain", "url": "https://git.enlight.dev/enlight360containers/kaas-ui/-/issues/7", "created": "18 May 2026"}, {"iid": 25, "title": "Username field asked for multiple times on login form", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Sagar Sainkar", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/25", "created": "15 May 2026"}, {"iid": 30, "title": "VM upscale - VM is halted still scale logs are generated", "project": "cloud-app", "domain": "IaaS Platform", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Sagar Sainkar", "url": "https://git.enlight.dev/enlight360containers/cloud-app/-/issues/30", "created": "13 May 2026"}, {"iid": 29, "title": "Deleted VM IP not shown in free IP list", "project": "cloud-app", "domain": "IaaS Platform", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Sagar Sainkar", "url": "https://git.enlight.dev/enlight360containers/cloud-app/-/issues/29", "created": "13 May 2026"}, {"iid": 23, "title": "Categories are not show as per given sort order", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Sagar Sainkar", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/23", "created": "12 May 2026"}, {"iid": 10, "title": "Product Catalogue - Error shown on view preview action click", "project": "market-place-ui", "domain": "Cloud Marketplace", "state": "closed", "stage": "In Dev", "severity": "Critical", "bugtype": "Functional", "assignee": "Anuj Chavan", "url": "https://git.enlight.dev/enlight360containers/market-place-ui/-/issues/10", "created": "10 May 2026"}];
 var _fn=function(){return true;};
 var DC={'IaaS Platform':'#2E75B6','PaaS & Kubernetes':'#7030A0','Cloud Marketplace':'#833C00','Developer Platform':'#ED7D31','SaaS Enablement':'#C00000','DBaaS & Data':'#375623','Other':'#888'};
 var DM=['IaaS Platform','PaaS & Kubernetes','Cloud Marketplace','Developer Platform','SaaS Enablement','DBaaS & Data','Other'];
 function eH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function rD(){
-  var t=BD.length; if(!t)return;
+  var t=BD.length;if(!t)return;
   var ob=BD.filter(function(b){return b.state==='open';});
   var cb=BD.filter(function(b){return b.state==='closed';});
   var dv=ob.filter(function(b){return b.stage==='In Dev';});
@@ -2415,57 +2398,57 @@ function rD(){
   document.getElementById('m-dev').textContent=dv.length;
   document.getElementById('m-closed-pct').textContent=Math.round(cb.length/t*100)+'% resolved';
   document.getElementById('m-open-pct').textContent=Math.round(ob.length/t*100)+'% remaining';
-  document.getElementById('prog-sub').textContent=t+' total - Milestone v9.8';
+  document.getElementById('prog-sub').textContent=t+' total - v9.8 - 1 June 2026';
   document.getElementById('prog-bar').innerHTML=[
     {p:Math.round(cb.length/t*100),c:'#1B5E20',l:'Closed '+cb.length,k:'closed'},
     {p:Math.round(dv.length/t*100),c:'#2E75B6',l:dv.length+' In Dev',k:'stage:In Dev'},
     {p:Math.round(qa.length/t*100),c:'#ED7D31',l:qa.length+' In QA',k:'stage:In QA'}
-  ].map(function(s){return '<div class="bdb-ps" style="width:'+s.p+'%;background:'+s.c+'" data-bdm="'+s.k+'">'+s.l+'</div>';}).join('');
+  ].map(function(s){return '<div class="bps" style="width:'+s.p+'%;background:'+s.c+'" data-bdm="'+s.k+'">'+s.l+'</div>';}).join('');
   document.getElementById('prog-leg').innerHTML=[
     {c:'#1B5E20',l:'Closed ('+cb.length+')'},{c:'#2E75B6',l:'In Dev ('+dv.length+')'},{c:'#ED7D31',l:'In QA ('+qa.length+')'}
-  ].map(function(x){return '<div class="bdb-li"><div class="bdb-ld" style="background:'+x.c+'"></div>'+x.l+'</div>';}).join('');
+  ].map(function(x){return '<div class="bli"><div class="bld" style="background:'+x.c+'"></div>'+x.l+'</div>';}).join('');
   var tb='';
   DM.forEach(function(d){
     var da=BD.filter(function(b){return b.domain===d;});
     if(!da.length)return;
-    var do2=da.filter(function(b){return b.state==='open';});
-    var dc=da.filter(function(b){return b.state==='closed';});
-    var dd=do2.filter(function(b){return b.stage==='In Dev';});
-    var dq=do2.filter(function(b){return b.stage==='In QA';});
-    var pct=Math.round(dc.length/da.length*100);
+    var dop=da.filter(function(b){return b.state==='open';});
+    var dcl=da.filter(function(b){return b.state==='closed';});
+    var ddv=dop.filter(function(b){return b.stage==='In Dev';});
+    var dqa=dop.filter(function(b){return b.stage==='In QA';});
+    var pct=Math.round(dcl.length/da.length*100);
     var col=DC[d]||'#888';
     var ws=pct<40?'color:#C00000;font-weight:600':'color:#888';
     tb+='<tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:'+col+';margin-right:6px;vertical-align:middle"></span><strong>'+d+'</strong></td>'
-      +'<td style="text-align:center"><span class="bdb-bdg" style="background:#e8eaf6;color:#1F3864" data-bdm="domain:'+d+'">'+da.length+'</span></td>'
-      +'<td style="text-align:center"><span class="bdb-bdg bdb-c" data-bdm="domain-closed:'+d+'">'+dc.length+'</span></td>'
-      +'<td style="text-align:center"><span class="bdb-bdg bdb-o" data-bdm="domain-open:'+d+'">'+do2.length+'</span></td>'
-      +'<td style="text-align:center"><span class="bdb-bdg bdb-d"'+(dd.length?' data-bdm="domain-dev:'+d+'"':'')+'>'+dd.length+'</span></td>'
-      +'<td style="text-align:center"><span class="bdb-bdg bdb-q"'+(dq.length?' data-bdm="domain-qa:'+d+'"':'')+'>'+dq.length+'</span></td>'
-      +'<td><div class="bdb-prog"><div class="bdb-pf" style="width:'+pct+'%;background:'+col+'"></div></div>'
+      +'<td style="text-align:center"><span class="bdg" style="background:#e8eaf6;color:#1F3864" data-bdm="domain:'+d+'">'+da.length+'</span></td>'
+      +'<td style="text-align:center"><span class="bdg bcc" data-bdm="domain-closed:'+d+'">'+dcl.length+'</span></td>'
+      +'<td style="text-align:center"><span class="bdg bo" data-bdm="domain-open:'+d+'">'+dop.length+'</span></td>'
+      +'<td style="text-align:center"><span class="bdg bdd"'+(ddv.length?' data-bdm="domain-dev:'+d+'"':'')+'>'+ddv.length+'</span></td>'
+      +'<td style="text-align:center"><span class="bdg bqq"'+(dqa.length?' data-bdm="domain-qa:'+d+'"':'')+'>'+dqa.length+'</span></td>'
+      +'<td><div class="bpg"><div class="bpf" style="width:'+pct+'%;background:'+col+'"></div></div>'
       +'<div style="font-size:10px;'+ws+';margin-top:3px">'+pct+'% resolved'+(pct<40?' (!)':'')+'</div></td></tr>';
   });
   document.getElementById('domain-tbody').innerHTML=tb;
   var sv=['Critical','Major','Minor','Normal','Blocker'];
   var sc={Critical:'#C00000',Major:'#ED7D31',Minor:'#70AD47',Normal:'#FFD966',Blocker:'#500000'};
-  var st2={Normal:'#4A2E00'};
+  var stx={Normal:'#4A2E00'};
   var sm={};sv.forEach(function(s){sm[s]=ob.filter(function(b){return b.severity===s;}).length;});
   var mx=Math.max.apply(null,sv.map(function(s){return sm[s]||0;}));
   var sh='';sv.forEach(function(s){if(!sm[s])return;var p=mx>0?Math.round(sm[s]/mx*100):0;
-    sh+='<div class="bdb-br"><div class="bdb-bl"><span style="background:'+sc[s]+';color:'+(st2[s]||'#fff')+';padding:2px 8px;border-radius:3px;font-size:10px;font-weight:700">'+s+'</span></div>'
-      +'<div class="bdb-bt" data-bdm="sev-open:'+s+'"><div class="bdb-bf" style="width:'+p+'%;background:'+sc[s]+';color:'+(st2[s]||'#fff')+'">'+sm[s]+'</div></div>'
-      +'<div class="bdb-bc" data-bdm="sev-open:'+s+'">'+sm[s]+'</div></div>';});
+    sh+='<div class="bbr"><div class="bbl"><span style="background:'+sc[s]+';color:'+(stx[s]||'#fff')+';padding:2px 8px;border-radius:3px;font-size:10px;font-weight:700">'+s+'</span></div>'
+      +'<div class="bbt" data-bdm="sev-open:'+s+'"><div class="bbf" style="width:'+p+'%;background:'+sc[s]+';color:'+(stx[s]||'#fff')+'">'+sm[s]+'</div></div>'
+      +'<div class="bbc" data-bdm="sev-open:'+s+'">'+sm[s]+'</div></div>';});
   document.getElementById('sev-body').innerHTML=sh||'<div style="color:#bbb;font-size:12px">No data</div>';
   var ty=['Functional','UI','Integration','Non Functional','Validation','Production'];
-  var tc2={Functional:'#2E75B6',UI:'#7030A0'};
+  var tc={Functional:'#2E75B6',UI:'#7030A0'};
   var tm={};ty.forEach(function(t){tm[t]=ob.filter(function(b){return b.bugtype===t;}).length;});
   var mx2=Math.max.apply(null,ty.map(function(t){return tm[t]||0;}));
-  var th2='';ty.forEach(function(t){if(!tm[t])return;var p=mx2>0?Math.round(tm[t]/mx2*100):0;
-    th2+='<div class="bdb-br"><div class="bdb-bl">'+t+'</div>'
-      +'<div class="bdb-bt" data-bdm="type-open:'+t+'"><div class="bdb-bf" style="width:'+p+'%;background:'+(tc2[t]||'#2E75B6')+'">'+tm[t]+'</div></div>'
-      +'<div class="bdb-bc" data-bdm="type-open:'+t+'">'+tm[t]+'</div></div>';});
-  document.getElementById('type-body').innerHTML=th2||'<div style="color:#bbb;font-size:12px">No data</div>';
+  var th='';ty.forEach(function(t){if(!tm[t])return;var p=mx2>0?Math.round(tm[t]/mx2*100):0;
+    th+='<div class="bbr"><div class="bbl">'+t+'</div>'
+      +'<div class="bbt" data-bdm="type-open:'+t+'"><div class="bbf" style="width:'+p+'%;background:'+(tc[t]||'#2E75B6')+'">'+tm[t]+'</div></div>'
+      +'<div class="bbc" data-bdm="type-open:'+t+'">'+tm[t]+'</div></div>';});
+  document.getElementById('type-body').innerHTML=th||'<div style="color:#bbb;font-size:12px">No data</div>';
   document.getElementById('stage-grid').innerHTML=[{k:'In Dev',c:'#2E75B6',n:dv.length},{k:'In QA',c:'#ED7D31',n:qa.length}]
-    .map(function(s){return '<div class="bdb-sb" data-bdm="stage:'+s.k+'"><div class="bdb-sv" style="color:'+s.c+'">'+s.n+'</div><div class="bdb-sl">'+s.k+'</div></div>';}).join('');
+    .map(function(s){return '<div class="bsb" data-bdm="stage:'+s.k+'"><div class="bsv" style="color:'+s.c+'">'+s.n+'</div><div class="bsl">'+s.k+'</div></div>';}).join('');
 }
 function bO(title,fn){_fn=fn;
   document.getElementById('bdm-title').textContent=title;
@@ -2489,13 +2472,13 @@ function bR(){
   document.getElementById('bdm-count').textContent=rows.length+' issues';
   document.getElementById('bdm-sub').textContent=rows.length+' issues found';
   var SB={Blocker:'#500000',Critical:'#C00000',Major:'#ED7D31',Normal:'#FFD966',Minor:'#70AD47'};
-  var ST={Normal:'#4A2E00'};
+  var STX={Normal:'#4A2E00'};
   var GB={'In Dev':'#E6F1FB','In QA':'#FEF3E2',Closed:'#E8F5E9'};
   var GT={'In Dev':'#0C447C','In QA':'#8B4000',Closed:'#1B5E20'};
   var h=rows.length?'':'<tr><td colspan="8" style="padding:32px;text-align:center;color:#bbb">No issues match</td></tr>';
   rows.forEach(function(b,i){
     var bg=i%2===0?'#fff':'#fafafa';
-    var sH=b.severity&&b.severity!='\u2014'?'<span style="display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:700;background:'+(SB[b.severity]||'#ddd')+';color:'+(ST[b.severity]||'#fff')+'">'+b.severity+'</span>':'<span style="color:#bbb">-</span>';
+    var sH=b.severity&&b.severity!='-'?'<span style="display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:700;background:'+(SB[b.severity]||'#ddd')+';color:'+(STX[b.severity]||'#fff')+'">'+b.severity+'</span>':'<span style="color:#bbb">-</span>';
     var stH='<span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;background:'+(GB[b.stage]||'#f5f5f5')+';color:'+(GT[b.stage]||'#555')+'">'+b.stage+'</span>';
     var lk=b.url?'<a href="'+b.url+'" target="_blank" style="color:#2E75B6;font-size:11px">View</a>':'-';
     h+='<tr style="background:'+bg+'"><td style="padding:6px 10px;color:#bbb;font-size:11px">#'+b.iid+'</td>'
@@ -2521,8 +2504,7 @@ document.addEventListener('click',function(e){
   else if(k.indexOf('domain:')===0){val=k.slice(7);title=val+' All';fn=(function(v){return function(b){return b.domain===v;};})(val);}
   else if(k.indexOf('sev-open:')===0){val=k.slice(9);title=val+' Severity';fn=(function(v){return function(b){return b.severity===v&&b.state==='open';};})(val);}
   else if(k.indexOf('type-open:')===0){val=k.slice(10);title=val+' Type';fn=(function(v){return function(b){return b.bugtype===v&&b.state==='open';};})(val);}
-  else return;
-  bO(title,fn);});
+  else return;bO(title,fn);});
 document.getElementById('bdm-search').addEventListener('input',bR);
 document.getElementById('bdm-fsev').addEventListener('change',bR);
 document.getElementById('bdm-fstage').addEventListener('change',bR);
@@ -2531,12 +2513,12 @@ document.getElementById('bdm-overlay').addEventListener('click',bC);
 document.addEventListener('keydown',function(e){if(e.key==='Escape')bC();});
 document.getElementById('bdb-excel').addEventListener('click',function(){
   var rows=[['#','Title','Project','Domain','State','Stage','Severity','Assignee','Created','Link']];
-  BD.forEach(function(b){rows.push(['#'+b.iid,b.title,b.project,b.domain,b.state,b.stage,b.severity==='\u2014'?'':b.severity,b.assignee==='\u2014'?'':b.assignee,b.created,b.url]);});
-  var csv='\uFEFF';
-  rows.forEach(function(row){csv+=row.map(function(c){var s=String(c||'').replace(/"/g,'""');return s.indexOf(',')>-1||s.indexOf('"')>-1?'"'+s+'"':s;}).join(',')+String.fromCharCode(13)+String.fromCharCode(10);});
+  BD.forEach(function(b){rows.push(['#'+b.iid,b.title,b.project,b.domain,b.state,b.stage,b.severity==='-'?'':b.severity,b.assignee==='-'?'':b.assignee,b.created,b.url]);});
+  var csv=String.fromCharCode(0xFEFF);
+  rows.forEach(function(row){csv+=row.map(function(c){var s=String(c||'').replace(/"/g,'""');return s.indexOf(',')>-1?'"'+s+'"':s;}).join(',')+String.fromCharCode(13,10);});
   var blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
-  var url=URL.createObjectURL(blob);
-  var a=document.createElement('a');a.href=url;a.download='Bug-Report-v9.8.csv';a.click();URL.revokeObjectURL(url);});
+  var url=URL.createObjectURL(blob);var a=document.createElement('a');
+  a.href=url;a.download='Bug-Report-v9.8.csv';a.click();URL.revokeObjectURL(url);});
 document.getElementById('bdb-print').addEventListener('click',function(){window.print();});
 rD();
 })();
