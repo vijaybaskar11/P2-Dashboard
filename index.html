@@ -2497,7 +2497,7 @@ function renderDashboard(){
   document.getElementById('m-total-sub').textContent  = 'v9.8 - 1 June 2026';
   document.getElementById('m-closed-pct').textContent = Math.round(closedBugs.length/total*100)+'% resolved';
   document.getElementById('m-open-pct').textContent   = Math.round(openBugs.length/total*100)+'% remaining';
-  document.getElementById('prog-sub').textContent     = total+' total · Milestone v9.8 - 1 June 2026';
+  document.getElementById('prog-sub').textContent     = total+' total \u00b7 Milestone v9.8 - 1 June 2026';
 
   var pb = document.getElementById('prog-bar');
   pb.innerHTML = [
@@ -2531,7 +2531,7 @@ function renderDashboard(){
       +'<td style="text-align:center"><span class="bdb-bdg bdb-d"'+(dDev.length?' data-bdm="domain-dev:'+d+'"':'')+'>'+dDev.length+'</span></td>'
       +'<td style="text-align:center"><span class="bdb-bdg bdb-q"'+(dQa.length?' data-bdm="domain-qa:'+d+'"':'')+'>'+dQa.length+'</span></td>'
       +'<td><div class="bdb-prog"><div class="bdb-pf" style="width:'+pct+'%;background:'+col+'"></div></div>'
-      +'<div style="font-size:10px;'+warnStyle+';margin-top:3px">'+pct+'% resolved'+(pct<40?' ⚠️':'')+'</div></td>'
+      +'<div style="font-size:10px;'+warnStyle+';margin-top:3px">'+pct+'% resolved'+(pct<40?' (!)':'')+'</div></td>'
       +'</tr>';
   });
   document.getElementById('domain-tbody').innerHTML = tbody;
@@ -2617,10 +2617,10 @@ function bdmRender(){
   if(!rows.length){h='<tr><td colspan="10" style="padding:32px;text-align:center;color:#bbb">No issues match the filters</td></tr>';}
   else{rows.forEach(function(b,i){
     var bg=i%2===0?'#fff':'#fafafa';
-    var sevH=b.severity&&b.severity!=='—'?'<span style="display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:700;background:'+(SB[b.severity]||'#ddd')+';color:'+(ST[b.severity]||'#fff')+'">'+b.severity+'</span>':'<span style="color:#bbb">—</span>';
+    var sevH=b.severity&&b.severity!=='\u2014'?'<span style="display:inline-block;padding:2px 8px;border-radius:3px;font-size:10px;font-weight:700;background:'+(SB[b.severity]||'#ddd')+';color:'+(ST[b.severity]||'#fff')+'">'+b.severity+'</span>':'<span style="color:#bbb">\u2014</span>';
     var stgH='<span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;background:'+(GB[b.stage]||'#f5f5f5')+';color:'+(GT[b.stage]||'#555')+'">'+b.stage+'</span>';
-    var typH=b.bugtype&&b.bugtype!=='—'?'<span style="font-size:10px;background:#f0f2f5;color:#555;padding:2px 7px;border-radius:3px">'+b.bugtype+'</span>':'<span style="color:#bbb">—</span>';
-    var lnk=b.url?'<a href="'+b.url+'" target="_blank" style="color:#2E75B6;font-size:11px;text-decoration:none">&#8599; View</a>':'—';
+    var typH=b.bugtype&&b.bugtype!=='\u2014'?'<span style="font-size:10px;background:#f0f2f5;color:#555;padding:2px 7px;border-radius:3px">'+b.bugtype+'</span>':'<span style="color:#bbb">\u2014</span>';
+    var lnk=b.url?'<a href="'+b.url+'" target="_blank" style="color:#2E75B6;font-size:11px;text-decoration:none">&#8599; View</a>':'\u2014';
     h+='<tr style="background:'+bg+'"><td style="padding:6px 10px;color:#bbb;font-size:11px">#'+b.iid+'</td>'
       +'<td style="padding:6px 10px;max-width:280px;font-size:12px;color:#222;line-height:1.4">'+eH(b.title)+'</td>'
       +'<td style="padding:6px 10px;font-size:11px;color:#555;white-space:nowrap">'+eH(b.project)+'</td>'
@@ -2644,11 +2644,11 @@ document.addEventListener('click',function(e){
   else if(k==='closed'){title='Closed Bugs';fn=function(b){return b.state==='closed';};}
   else if(k==='open'){title='Open Bugs';fn=function(b){return b.state==='open';};}
   else if(k.indexOf('stage:')===0){val=k.slice(6);title='Stage: '+val;fn=(function(v){return function(b){return b.stage===v;};})(val);}
-  else if(k.indexOf('domain-closed:')===0){val=k.slice(14);title=val+' — Closed';fn=(function(v){return function(b){return b.domain===v&&b.state==='closed';};})(val);}
-  else if(k.indexOf('domain-open:')===0){val=k.slice(12);title=val+' — Open';fn=(function(v){return function(b){return b.domain===v&&b.state==='open';};})(val);}
-  else if(k.indexOf('domain-dev:')===0){val=k.slice(11);title=val+' — In Dev';fn=(function(v){return function(b){return b.domain===v&&b.stage==='In Dev';};})(val);}
-  else if(k.indexOf('domain-qa:')===0){val=k.slice(10);title=val+' — In QA';fn=(function(v){return function(b){return b.domain===v&&b.stage==='In QA'&&b.state==='open';};})(val);}
-  else if(k.indexOf('domain:')===0){val=k.slice(7);title=val+' — All';fn=(function(v){return function(b){return b.domain===v;};})(val);}
+  else if(k.indexOf('domain-closed:')===0){val=k.slice(14);title=val+' \u2014 Closed';fn=(function(v){return function(b){return b.domain===v&&b.state==='closed';};})(val);}
+  else if(k.indexOf('domain-open:')===0){val=k.slice(12);title=val+' \u2014 Open';fn=(function(v){return function(b){return b.domain===v&&b.state==='open';};})(val);}
+  else if(k.indexOf('domain-dev:')===0){val=k.slice(11);title=val+' \u2014 In Dev';fn=(function(v){return function(b){return b.domain===v&&b.stage==='In Dev';};})(val);}
+  else if(k.indexOf('domain-qa:')===0){val=k.slice(10);title=val+' \u2014 In QA';fn=(function(v){return function(b){return b.domain===v&&b.stage==='In QA'&&b.state==='open';};})(val);}
+  else if(k.indexOf('domain:')===0){val=k.slice(7);title=val+' \u2014 All';fn=(function(v){return function(b){return b.domain===v;};})(val);}
   else if(k.indexOf('sev-open:')===0){val=k.slice(9);title=val+' Severity';fn=(function(v){return function(b){return b.severity===v&&b.state==='open';};})(val);}
   else if(k.indexOf('type-open:')===0){val=k.slice(10);title=val+' Type';fn=(function(v){return function(b){return b.bugtype===v&&b.state==='open';};})(val);}
   else return;
@@ -2666,8 +2666,8 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')bdmClose();}
 // Excel Export
 document.getElementById('bdb-excel').addEventListener('click',function(){
   var rows=[['#','Title','Project','Domain','State','Stage','Severity','Bug Type','Assignee','Created','Link']];
-  BD.forEach(function(b){rows.push(['#'+b.iid,b.title,b.project,b.domain,b.state,b.stage,b.severity==='—'?'':b.severity,b.bugtype==='—'?'':b.bugtype,b.assignee==='—'?'':b.assignee,b.created,b.url]);});
-  var csv='﻿';
+  BD.forEach(function(b){rows.push(['#'+b.iid,b.title,b.project,b.domain,b.state,b.stage,b.severity==='\u2014'?'':b.severity,b.bugtype==='\u2014'?'':b.bugtype,b.assignee==='\u2014'?'':b.assignee,b.created,b.url]);});
+  var csv='\ufeff';
   rows.forEach(function(row){csv+=row.map(function(c){var s=String(c||'').replace(/"/g,'""');return s.indexOf(',')>-1||s.indexOf('"')>-1?'"'+s+'"':s;}).join(',')+'
 ';});
   var blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
@@ -2689,7 +2689,7 @@ document.getElementById('bdb-save-img').addEventListener('click',function(){
       link.download='Bug-Dashboard-v9.8-'+new Date().toISOString().slice(0,10)+'.png';
       link.href=canvas.toDataURL('image/png');
       link.click();
-      btn.textContent='↓ Save Image';
+      btn.textContent='\u2193 Save Image';
     });
   };
   document.head.appendChild(script);
@@ -3258,7 +3258,6 @@ window.addEventListener('load', function() {
   document.querySelectorAll('.ed-ta').forEach(function(ta) { autoResize(ta); });
   attachListeners();
   loadEdits();
-  loadAT();
   updateDashboard();
   updateCurrentDate();
 });
