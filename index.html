@@ -2702,7 +2702,7 @@ document.getElementById('bdb-save-img').addEventListener('click',function(){
 // Print
 document.getElementById('bdb-print').addEventListener('click',function(){window.print();});
 
-if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",renderDashboard);}else{renderDashboard();}
+window.addEventListener("load", function(){ try{ renderDashboard(); }catch(ex){ var d=document.getElementById("bdb-debug"); if(d) d.innerHTML="<b style='color:red'>Error: "+ex.message+"</b>"; } });
 }catch(e){var dbg=document.getElementById("bdb-debug");if(dbg)dbg.innerHTML="<strong style='color:red'>JS ERROR: "+e.message+"</strong> at "+e.stack;console.error("BDB Error:",e);}
 })();
 </script>
