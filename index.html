@@ -2498,7 +2498,7 @@ document.addEventListener('click',function(e){
   if(k==='all'){title='All Bugs';fn=function(){return true;};}
   else if(k==='closed'){title='Closed';fn=function(b){return b.state==='closed';};}
   else if(k==='open'){title='Open';fn=function(b){return b.state==='open';};}
-  else if(k.indexOf('stage:')===0){val=k.slice(6);title='Stage: '+val;fn=(function(v){return function(b){return b.stage===v;};})(val);}
+  else if(k.indexOf('stage:')===0){val=k.slice(6);title='Stage: '+val;fn=(function(v){return function(b){return b.stage===v&&b.state==='open';};})(val);}
   else if(k.indexOf('domain-closed:')===0){val=k.slice(14);title=val+' Closed';fn=(function(v){return function(b){return b.domain===v&&b.state==='closed';};})(val);}
   else if(k.indexOf('domain-open:')===0){val=k.slice(12);title=val+' Open';fn=(function(v){return function(b){return b.domain===v&&b.state==='open';};})(val);}
   else if(k.indexOf('domain-dev:')===0){val=k.slice(11);title=val+' In Dev';fn=(function(v){return function(b){return b.domain===v&&b.stage==='In Dev';};})(val);}
