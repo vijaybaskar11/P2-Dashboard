@@ -2577,7 +2577,7 @@ document.addEventListener('click',function(e){
   else if(k.indexOf('stage:')===0){val=k.slice(6);title='Stage: '+val;fn=(function(v){return function(b){return b.stage===v&&b.state==='open';};})(val);}
   else if(k.indexOf('domain-closed:')===0){val=k.slice(14);title=val+' Closed';fn=(function(v){return function(b){return b.domain===v&&b.state==='closed';};})(val);}
   else if(k.indexOf('domain-open:')===0){val=k.slice(12);title=val+' Open';fn=(function(v){return function(b){return b.domain===v&&b.state==='open';};})(val);}
-  else if(k.indexOf('domain-dev:')===0){val=k.slice(11);title=val+' In Dev';fn=(function(v){return function(b){return b.domain===v&&b.stage==='In Dev';};})(val);}
+  else if(k.indexOf('domain-dev:')===0){val=k.slice(11);title=val+' In Dev';fn=(function(v){return function(b){return b.domain===v&&b.stage==='In Dev'&&b.state==='open';};})(val);}
   else if(k.indexOf('domain-qa:')===0){val=k.slice(10);title=val+' In QA';fn=(function(v){return function(b){return b.domain===v&&b.stage==='In QA'&&b.state==='open';};})(val);}
   else if(k.indexOf('domain:')===0){val=k.slice(7);title=val+' All';fn=(function(v){return function(b){return b.domain===v;};})(val);}
   else if(k.indexOf('sev-open:')===0){val=k.slice(9);title=val+' Severity';fn=(function(v){return function(b){return b.severity===v&&b.state==='open';};})(val);}
